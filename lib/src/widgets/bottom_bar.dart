@@ -1,7 +1,6 @@
 import 'package:delivery01/src/pages/product_detail_page/widgets/card_cart.dart';
 import 'package:delivery01/src/widgets/circular_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../constants.dart';
 import 'categories_cart.dart';
