@@ -24,7 +24,7 @@ class ProductDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: 350,
+      top: 0,
       left: 0,
       right: 0,
       child: Padding(
@@ -33,7 +33,7 @@ class ProductDetail extends StatelessWidget {
           vertical: 30,
         ),
         child: Container(
-          height: size.height,
+          height: 800,
           child: Column(
             children: [
               Row(
