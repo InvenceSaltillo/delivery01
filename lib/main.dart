@@ -1,3 +1,4 @@
+import 'package:delivery01/src/pages/cart/cart_page.dart';
 import 'package:delivery01/src/pages/home/home_page.dart';
 import 'package:delivery01/src/pages/product_detail_page/product_detail_page.dart';
 import 'package:delivery01/src/providers/categories_provider.dart';
@@ -20,10 +21,11 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Material App',
-        initialRoute: 'product_detail',
+        initialRoute: 'home',
         routes: {
           'home': (_) => HomePage(),
           'product_detail': (_) => ProductDetailPage(),
+          'cart': (_) => CartPage(),
         },
       ),
     );

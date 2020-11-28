@@ -40,22 +40,25 @@ class DetailAppbar extends StatelessWidget {
           bottom: 95,
           left: 50,
           child: Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: List.generate(
-                _list.length,
-                (index) => Indicator(
-                  positionIndex: index,
-                  currentIndex: _currentIndex,
-                ),
-              )),
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: List.generate(
+              _list.length,
+              (index) => Indicator(
+                positionIndex: index,
+                currentIndex: _currentIndex,
+              ),
+            ),
+          ),
         ),
         Positioned(
           top: 50,
           left: 40,
           child: CircularButton(
-            onTap: () {},
+            onTap: () {
+              Navigator.pop(context);
+            },
             icon: Icon(
               Icons.clear,
               color: Colors.white,

@@ -1,3 +1,4 @@
+import 'package:delivery01/src/pages/home/widgets/shopping_cart_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -11,11 +12,13 @@ class ProductCard extends StatelessWidget {
     @required this.description,
     @required this.price,
     @required this.image,
+    @required this.onTap,
   }) : super(key: key);
 
   final String title, description, image;
   final double price;
   final int disccount;
+  final GestureTapCallback onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -131,16 +134,7 @@ class ProductCard extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
-              width: 30,
-              height: double.infinity,
-              alignment: Alignment.bottomLeft,
-              child: FloatingActionButton(
-                backgroundColor: kPrimaryColor,
-                onPressed: () {},
-                child: SvgPicture.asset('assets/icons/shopping-cart.svg'),
-              ),
-            ),
+            ShoppingCartButton(onTap: onTap),
           ],
         ),
       ),

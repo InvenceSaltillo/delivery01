@@ -1,6 +1,7 @@
 import 'package:delivery01/src/constants.dart';
 import 'package:delivery01/src/pages/home/widgets/product_card.dart';
 import 'package:delivery01/src/pages/home/widgets/textfield_search.dart';
+import 'package:delivery01/src/pages/product_detail_page/product_detail_page.dart';
 import 'package:delivery01/src/widgets/bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -67,6 +68,14 @@ class HomeBody extends StatelessWidget {
                               ),
                             ),
                             ProductCard(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => ProductDetailPage(),
+                                  ),
+                                );
+                              },
                               image: 'assets/images/pizzaVeloper.svg',
                               price: 120.99,
                               disccount: 32,
@@ -75,6 +84,7 @@ class HomeBody extends StatelessWidget {
                               title: 'Pizza veloper',
                             ),
                             ProductCard(
+                              onTap: () {},
                               image: 'assets/images/pizzaVeloper.svg',
                               price: 70,
                               description:
@@ -98,6 +108,7 @@ class HomeBody extends StatelessWidget {
                               ),
                             ),
                             ProductCard(
+                              onTap: () {},
                               image: 'assets/images/029-burger.svg',
                               price: 120.99,
                               disccount: 32,
