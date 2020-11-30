@@ -26,11 +26,12 @@ class Categories extends StatelessWidget {
         children: List.generate(
           categories.length,
           (index) => CategoryCard(
-              icon: categories[index]['icon'],
-              text: categories[index]['text'],
-              selected: false,
-              press: () =>
-                  categoryProvider.categoryName = categories[index]['text']),
+            icon: categories[index]['icon'],
+            text: categories[index]['text'],
+            selected: false,
+            press: () =>
+                categoryProvider.categoryName = categories[index]['text'],
+          ),
         ),
       ),
     );

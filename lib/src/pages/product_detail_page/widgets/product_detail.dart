@@ -14,27 +14,32 @@ class ProductDetail extends StatelessWidget {
     @required ProductProvider productProvider,
     @required String site,
   })  : _productProvider = productProvider,
-        _site = site,
+        _optionSelected = site,
         super(key: key);
 
   final Size size;
   final ProductProvider _productProvider;
-  final String _site;
+  final String _optionSelected;
 
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: 0,
+      top: size.height * .38,
       left: 0,
       right: 0,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 30.0,
-          vertical: 30,
+      child: Container(
+        width: double.infinity,
+        height: size.height - 180,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(25),
+            topRight: Radius.circular(25),
+          ),
         ),
-        child: Container(
-          height: 800,
-          child: Column(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+          child: ListView(
             children: [
               Row(
                 children: [
@@ -80,7 +85,67 @@ class ProductDetail extends StatelessWidget {
               Sizes(productProvider: _productProvider),
               SizedBox(height: 30),
               ComplementsTitle(),
-              Options(productProvider: _productProvider, site: _site),
+              ListTile(
+                onTap: () {
+                  _productProvider.selectedOption = 'opcion1';
+                },
+                title: Text(
+                  'Opcion 1',
+                  style: TextStyle(
+                    fontSize: 13,
+                    color: kTextColor,
+                  ),
+                ),
+                trailing: Radio(
+                  value: 'opcion1',
+                  groupValue: _optionSelected,
+                  activeColor: kPrimaryColor,
+                  onChanged: (value) {
+                    _productProvider.selectedOption = value;
+                  },
+                ),
+              ),
+              ListTile(
+                onTap: () {
+                  _productProvider.selectedOption = 'opcion2';
+                },
+                title: Text(
+                  'Opcion 2',
+                  style: TextStyle(
+                    fontSize: 13,
+                    color: kTextColor,
+                  ),
+                ),
+                trailing: Radio(
+                  value: 'opcion2',
+                  groupValue: _optionSelected,
+                  activeColor: kPrimaryColor,
+                  onChanged: (value) {
+                    _productProvider.selectedOption = value;
+                  },
+                ),
+              ),
+              ListTile(
+                onTap: () {
+                  _productProvider.selectedOption = 'opcion3';
+                },
+                title: Text(
+                  'Opcion 3',
+                  style: TextStyle(
+                    fontSize: 13,
+                    color: kTextColor,
+                  ),
+                ),
+                trailing: Radio(
+                  value: 'opcion3',
+                  groupValue: _optionSelected,
+                  activeColor: kPrimaryColor,
+                  onChanged: (value) {
+                    _productProvider.selectedOption = value;
+                  },
+                ),
+              ),
+              SizedBox(height: 200),
             ],
           ),
         ),

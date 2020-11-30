@@ -18,8 +18,13 @@ class BodyDetail extends StatelessWidget {
       height: size.height,
       child: Stack(
         children: [
+          ProductDetail(
+            size: size,
+            productProvider: _productProvider,
+            site: _site,
+          ),
           Positioned(
-            top: 0,
+            top: 315,
             right: 60,
             child: CircularButton(
               icon: Icon(
@@ -33,8 +38,6 @@ class BodyDetail extends StatelessWidget {
               onTap: () {},
             ),
           ),
-          ProductDetail(
-              size: size, productProvider: _productProvider, site: _site),
           Positioned(
             child: BottomBar(
               itemCount: 5,

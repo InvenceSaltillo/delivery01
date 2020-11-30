@@ -1,5 +1,5 @@
 import 'package:delivery01/src/constants.dart';
-
+import 'package:delivery01/src/pages/home/widgets/product_card.dart';
 import 'package:delivery01/src/providers/detail_appbar_provider.dart';
 import 'package:delivery01/src/providers/product_provider.dart';
 import 'package:delivery01/src/widgets/bottom_bar.dart';

@@ -4,6 +4,7 @@ import 'package:delivery01/src/pages/home/widgets/textfield_search.dart';
 import 'package:delivery01/src/pages/product_detail_page/product_detail_page.dart';
 import 'package:delivery01/src/widgets/bottom_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import 'categories.dart';
 import 'custom_appbar.dart';
