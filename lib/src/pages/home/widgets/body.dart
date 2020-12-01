@@ -109,7 +109,7 @@ class HomeBody extends StatelessWidget {
                             ),
                             ProductCard(
                               onTap: () {},
-                              image: 'assets/images/029-burger.svg',
+                              image: 'assets/images/burger.svg',
                               price: 120.99,
                               disccount: 32,
                               description:

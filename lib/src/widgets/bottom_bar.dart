@@ -91,32 +91,32 @@ class BottomBar extends StatelessWidget {
 void displayBottomSheet(BuildContext context) {
   List<Map<String, dynamic>> categories = [
     {
-      "icon": "assets/images/029-burger.svg",
+      "icon": "assets/images/burger.svg",
       "text": "Burguer",
       "color": Color(0xffCAE9F7)
     },
     {
-      "icon": "assets/images/Grupo 2759.svg",
+      "icon": "assets/images/steak.svg",
       "text": "Carne",
       "color": Color(0xffCAF7D6)
     },
     {
-      "icon": "assets/images/013-sandwich.svg",
+      "icon": "assets/images/donut.svg",
       "text": "Postres",
       "color": Color(0xffF7D0CA)
     },
     {
-      "icon": "assets/images/024-soup.svg",
+      "icon": "assets/images/soup.svg",
       "text": "Sopas",
       "color": Color(0xffF1ECCA)
     },
     {
-      "icon": "assets/images/007-pizza.svg",
+      "icon": "assets/images/pizza.svg",
       "text": "Pollo",
       "color": Color(0xffCCCAF1)
     },
     {
-      "icon": "assets/images/016-barbecue.svg",
+      "icon": "assets/images/barbecue.svg",
       "text": "Brocheta",
       "color": Color(0xffCAE9F7)
     },
@@ -162,8 +162,8 @@ void displayBottomSheet(BuildContext context) {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 20.0),
-                      child: Image.asset(
-                        'assets/icons/shopping-cart.png',
+                      child: SvgPicture.asset(
+                        'assets/icons/shopping-cart.svg',
                         width: 25,
                         height: 25,
                         color: kSecondaryColor,
